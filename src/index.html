@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" defer href="./src/style.css" />
+    <script defer src="./src/index.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <dialog id="createTodoDialog">
+      <form id="form">
+        <div class="input">
+          <label for="title">Title</label>
+          <input type="text" id="title" name="title" />
+        </div>
+        <div class="input">
+          <label for="description">Description</label>
+          <input
+            type="text"
+            id="description"
+            name="description"
+            placeholder="optional"
+          />
+        </div>
+        <div class="input">
+          <label for="dueDate">Due Date</label>
+          <input type="date" id="dueDate" name="dueDate" />
+        </div>
+        <div class="input">
+          <label for="priority">Priority</label>
+          <select id="priority" name="priority">
+            <option value="low">Low</option>
+            <option value="medium">Medium</option>
+            <option value="high">High</option>
+          </select>
+          <div class="input">
+            <label for="completed">Completed</label>
+            <input type="checkbox" id="completed" name="completed" />
+          </div>
+        </div>
+        <button value="cancel" class="cancelBtn" formmethod="dialog">
+          Cancel
+        </button>
+        <button id="confirmBtn" value="create">Confirm</button>
+      </form>
+    </dialog>
+    <dialog id="createProjectDialog">
+      <form id="form">
+        <div class="input">
+          <label for="title">Title</label>
+          <input type="text" id="title" name="title" />
+        </div>
+        <div class="input">
+          <label for="description">Description</label>
+          <input
+            type="text"
+            id="description"
+            name="description"
+            placeholder="optional"
+          />
+        </div>
+        <div class="input">
+          <label for="dueDate">Due Date</label>
+          <input type="date" id="dueDate" name="dueDate" />
+        </div>
+        <button value="cancel" class="cancelBtn" formmethod="dialog">
+          Cancel
+        </button>
+        <button id="confirmBtn" value="create">Confirm</button>
+      </form>
+    </dialog>
+    <div id="root">
+      <div id="header">
+        <h1>Todo-List</h1>
+      </div>
+      <div id="main"></div>
+      <div id="sidebar">
+        <div id="date"></div>
+        <div id="time"></div>
+      </div>
+    </div>
+  </body>
+</html>

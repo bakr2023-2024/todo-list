@@ -1,0 +1,144 @@
+body {
+  width: 100%;
+  height: 100%;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+h1 {
+  text-align: center;
+}
+.project {
+  display: flex;
+  flex-direction: column;
+  border-radius: 0.5rem;
+  margin: 0.5rem;
+  padding: 0.5rem;
+}
+.invisible {
+  display: none;
+}
+.todo {
+  padding: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid black;
+  border-radius: 4px;
+}
+.todo > div {
+  display: flex;
+  align-items: center;
+}
+.expanded {
+  display: block;
+}
+.completed {
+  background-color: green;
+}
+.projectOptions {
+  display: flex;
+  justify-content: space-between;
+  background-color: darkmagenta;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  align-items: center;
+}
+.projectOptions button {
+  width: 18%;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+.projectOptions > div {
+  display: flex;
+  align-items: center;
+}
+.todoOptions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#root {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto 1fr;
+}
+#header {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+}
+#date,
+#time {
+  font-size: 2rem;
+}
+.darkMode {
+  background-color: black;
+  color: white;
+}
+button:hover{
+  cursor: pointer;
+  background-color: darkmagenta;
+  color: white;
+}
+#confirmBtn:hover{
+  background-color: green;
+  color: white;
+}
+.cancelBtn:hover{
+  background-color: red;
+  color: white;
+}
+#main {
+  grid-row: 2 / -1;
+  grid-column: 2 / -1;
+}
+#sidebar {
+  grid-row: 2/-1;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap:0.5rem;
+}
+#root > div {
+  border-width: 1px;
+  border-style: solid;
+}
+#sidebar button{
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-size:2rem;
+}
+dialog {
+  border-radius: 0.5rem;
+  padding:1rem;
+}
+dialog form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+dialog input,dialog button{
+  font-size:2rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+#createTodoDialog select{
+  font-size:2rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+#sidebar select{
+  font-size:1rem;
+  padding: 0.5rem;
+}
+#sidebar input{
+  font-size:1.5rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
