@@ -1,0 +1,168 @@
+/* Base */
+body {
+  font-family: "Segoe UI", sans-serif;
+  margin: 0;
+  padding: 2rem;
+  background-color: #f4f6f8;
+  color: #2c3e50;
+}
+
+/* Layout */
+#content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+#projects {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Project Card */
+.project {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  border-left: 6px solid #1976d2;
+}
+
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.project-title {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.project-actions button {
+  margin-left: 6px;
+}
+
+/* Todo */
+.todo {
+  background: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-top: 12px;
+  padding: 12px 16px;
+  transition: background 0.2s;
+}
+
+.todo:hover {
+  background: #f1f1f1;
+}
+
+.todo-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.todo-title {
+  font-size: 1.1rem;
+  margin: 0;
+  flex: 1;
+}
+
+.todo-actions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.todo-body {
+  margin-top: 8px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.todo-details {
+  margin-bottom: 4px;
+}
+
+.todo-due-date {
+  font-style: italic;
+}
+
+.todo-priority::before {
+  content: "Priority: ";
+  font-weight: 500;
+  color: #222;
+}
+
+/* Priority colors */
+.todo-high {
+  border-left: 4px solid #e53935;
+}
+
+.todo-medium {
+  border-left: 4px solid #fbc02d;
+}
+
+.todo-low {
+  border-left: 4px solid #43a047;
+}
+
+/* Completed Todo */
+.todo.done {
+  opacity: 0.5;
+}
+
+.todo.done .todo-title {
+  text-decoration: line-through;
+}
+
+/* Buttons */
+button {
+  background: #1976d2;
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: background 0.2s;
+}
+
+button:hover {
+  background: #1565c0;
+}
+
+/* Dialogs */
+dialog {
+  border: none;
+  border-radius: 12px;
+  padding: 24px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+dialog input,
+dialog textarea,
+dialog select {
+  width: 100%;
+  margin-bottom: 16px;
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+dialog button {
+  margin-top: 10px;
+}
+
+/* Utility */
+.hide {
+  display: none;
+}
+header h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
